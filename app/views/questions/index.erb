@@ -1,0 +1,18 @@
+<h1>Poke Overflow Questions</h1>
+
+<% if session[:user_id] %>
+  <button id="get-question-form">
+    Create New Question
+  </button>
+<% end %>
+
+  <div id="new-question-form">
+  </div>
+
+<div id="questions">
+    <% @all_questions.each do |question| %>
+  <ul class="view-single-question">
+      <%= erb :'partials/_questioninfo', locals: {question: question} %>
+  </ul>
+    <% end %>
+</div>
