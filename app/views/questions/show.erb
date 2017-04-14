@@ -1,0 +1,61 @@
+<div class="posted-question">
+  <h2><%= @question.title %></h2>
+  <h3><%= @question.description %></h3>
+  <p>Question posted by: <%= @user.username %></p>
+</div>
+
+<hr>
+<div id="comments">
+  <h3>Comments:</h3>
+  <ul id="comments-section">
+    <% @all_comments.each do |comment| %>
+    <button type="submit" class="up-vote">+</button>
+    <button type="submit" class="down-vote">-</button
+      <p><strong><%= comment.votes.length %></strong>
+        <%= comment.content %> -
+        <% user = User.find(comment.user_id) %>
+        <em><%= user.username %></em>
+      </p>
+    <% end %>
+  </ul>
+</div>
+
+<% if session[:user_id] %>
+  <button id="get-comment-form">
+    Create New Comment
+  </button>
+<% end %>
+
+<div>
+  <form id="new-comment-form" action='/questions/<%= @question.id %>/comments' method='post' name='<%= @question.id %>'>
+    <input type="text" name="content" placeholder="comment here">
+    <input type="submit">
+  </form>
+</div>
+
+<div class="answers">
+  <h3> Answers: </h3>
+  <% if @answers %>
+    <% @answers.each do |answer| %>
+    <!-- <div id="unique-answer-<%= answer.id %>"> -->
+    <%= erb :'/questions/_answer', :locals => {:question => @question, :answer => answer} %>
+      <% answer.comments.each do |comment| %>
+        <div class="margin">
+        <p><%= comment.content %></p>
+        <p class="comment-answer">Commented by -<%= comment.user.username %></p>
+        </div>
+        <!-- <p class="comment-answer"><%= comment.created_at %></p> -->
+      <% end %>
+    <!-- </div> -->
+    <% end %>
+      <div class="new-comment">
+      </div>
+  <% end %>
+</div>
+
+<% if session[:user_id] %>
+  <form id="post-an-answer" action='/questions/<%= @question.id %>/answers' method='post' name="<%= @question.id %>">
+    <textarea cols="50" rows="8" placeholder="Your answer here..."></textarea>
+    <input class="submit-button" type="submit" value="Post">
+  </form>
+<% end %>

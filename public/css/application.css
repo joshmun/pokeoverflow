@@ -1,0 +1,177 @@
+#login-form {
+  display: none;
+  float: right;
+}
+
+#register {
+  display: block;
+  float: right;
+}
+
+.email {
+  display: block;
+  width: 200px;
+  margin: 5px;
+}
+
+.password {
+  display: inline-block;
+  width: 125px;
+  margin-left: 5px;
+}
+
+.submit-button {
+  display: inline-block;
+  width: 65px;
+}
+
+.name {
+  display: block;
+  width: 200px;
+  margin: 5px;
+}
+
+.username {
+  display: block;
+  width: 200px;
+  margin-left: 5px;
+}
+
+.nav-buttons {
+  float: right;
+  margin: auto;
+  padding: 5px;
+}
+
+#new-comment-form {
+  display: none;
+}
+
+
+#update-profile {
+  display: none;
+}
+
+.view-single-question li {
+  list-style: none;
+}
+
+#vote-value {
+  font-size: 32px;
+}
+
+.view-single-question a {
+  margin-left: 10px;
+  border-left: 1px solid black;
+}
+
+.up-vote {
+  display:block;
+  width:25px;
+  height:25px;
+  line-height:25px;
+  border: 2px solid #06ab2a;
+  border-radius: 50%;
+  color: white;
+  text-align:center;
+  text-decoration:none;
+  background: #06ab2a;
+  box-shadow: 0 0 3px gray;
+  font-size:20px;
+  font-weight:bold;
+  float: left;
+  margin-left: 0px
+}
+
+.up-vote:hover {
+  background: #024210;
+}
+
+.down-vote {
+  display:block;
+  width:25px;
+  height:25px;
+  line-height:25px;
+  border: 2px solid #d41212;
+  border-radius: 50%;
+  color: white;
+  text-align:center;
+  text-decoration:none;
+  background: #d41212;
+  box-shadow: 0 0 3px gray;
+  font-size:20px;
+  font-weight:bold;
+  float: left;
+  margin-left: 0px
+}
+
+.down-vote:hover {
+  background: #5e0000;
+}
+
+.container {
+  overflow-y: scroll;
+  height: 100%;
+  display: block;
+  max-width: 65%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+html, body {
+  height: 90%;
+}
+
+body {
+  background-image: url("https://mindbodygreen-res.cloudinary.com/images/c_scale,w_770,q_80,f_auto,fl_lossy/crp/pokebowltrend-828x492/need-know-poke-bowl-trend-nutritionist-explains.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #BFD8D2;
+}
+
+html * {
+  font-family: futura;
+}
+
+ul.view-single-question {
+  margin: 20px;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+p.comment-answer {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.margin {
+  margin: 0% 3%;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
+form input {
+  border-radius: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+button {
+  border-radius: 5px;
+}
